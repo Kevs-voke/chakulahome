@@ -137,8 +137,7 @@ export const useOrderStore = create<CartState>()(
         };
 
         try {
-          const res = await fetch(
-            "http://localhost:8080/api/order/make-order",
+          const res =  await apiRequest(API.ORDERS.MAKE_ORDER,
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
