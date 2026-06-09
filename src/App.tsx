@@ -17,7 +17,7 @@ export default function App() {
   const { user, logout, isAuthenticated } = useAuthStore();
   const cartCount = useOrderStore((s) => s.totalItems());
 
-  const authed = isAuthenticated();
+ const authed = useAuthStore((s) => !!s.token);
 
   return (
     <div className="min-h-screen bg-stone-950 text-stone-100 font-sans">
