@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { FoodDTO, OrderItem, Order } from "../models/Food";
+import { apiRequest } from "../Enpoints/apiRequest";
+import { API } from "../Enpoints/API";
 
 // ==================== API TYPES (Backend DTOs) ====================
 export type OrderItemRequestDTO = {
