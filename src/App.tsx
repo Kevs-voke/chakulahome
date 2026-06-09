@@ -14,7 +14,7 @@ type AppPage = "menu" | "cart";
 export default function App() {
   const [authPage, setAuthPage] = useState<AuthPage>("login");
   const [appPage, setAppPage] = useState<AppPage>("menu");
-  const { user, logout, isAuthenticated } = useAuthStore();
+  const { user, logout } = useAuthStore();
   const cartCount = useOrderStore((s) => s.totalItems());
 
  const authed = useAuthStore((s) => !!s.token);
